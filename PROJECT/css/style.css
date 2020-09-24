@@ -1,0 +1,26 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background: skyblue ;
+}
+
+header {
+    background: blue;
+    height: 66px;
+}
+
+header * {
+    color: black
+}
+
+header.logo {
+    float: left;
+}
+
+header ul{
+    float: right
+}
+
+header.menu-toggle{
+    display: none;
+}
