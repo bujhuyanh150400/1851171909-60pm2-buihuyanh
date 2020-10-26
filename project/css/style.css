@@ -1,9 +1,11 @@
 header {
-    background: #008489;
+    background: #292953;
     height: 66px;
 }
 
+html,
 body {
+    height: 100%;
     padding: 0px;
     margin: 0px;
     background: #f6f6f6;
@@ -36,6 +38,60 @@ a {
     clear: both;
 }
 
+.btn {
+    padding: .5rem 1rem;
+    background: #006669;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 25rem;
+}
+
+.btn:hover {
+    color: white !important;
+    background: #005c5f;
+}
+
+.btn-big {
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
+}
+
+.text-input {
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0e0;
+    outline: none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.msg {
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.success {
+    color: #303063;
+    border: 1px solid #303063;
+    background: wheat;
+}
+
+.error {
+    color: red;
+    border: 1px solid #303063;
+    background: wheat;
+}
+
+
+/*navbar*/
+
 header .logo {
     float: left;
     height: inherit;
@@ -59,7 +115,7 @@ header .logo-text {
 }
 
 header .logo-text span {
-    color: #05f7ff;
+    color: blue;
 }
 
 header * {
@@ -119,6 +175,10 @@ header ul li ul li a.logout {
 
 .page-wrapper :hover {
     color: #006669;
+}
+
+.page-wrapper {
+    min-height: 100%;
 }
 
 
@@ -187,27 +247,60 @@ header ul li ul li a.logout {
 .content {
     width: 90%;
     margin: 30px auto 30px;
-    border: 1px solid red;
 }
 
 .content .main-content {
     width: 70%;
     float: left;
-    border: 1px solid blue;
+}
+
+.content .main-content.single {
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.content .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .content .main-content .post {
     width: 95%;
     height: 270px;
-    margin: 10px auto;
+    margin: 20px auto;
     border-radius: 5px;
     background: white;
+    position: relative;
+}
+
+.content .main-content .post .read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #005c5f;
+    background: transparent;
+    border-radius: 0px;
+    color: #005c5f !important;
+}
+
+.content .main-content .post .read-more:hover {
+    background: #006669;
+    color: white !important;
+    transition: .25s;
 }
 
 .content .main-content .post .post-image {
     width: 40%;
     height: 100%;
     float: left;
+}
+
+.content .main-content .post .post-preview {
+    padding: 10px;
+    width: 60%;
+    float: right;
 }
 
 .content .main-content .recent-post-title {
@@ -217,8 +310,150 @@ header ul li ul li a.logout {
 .content .sidebar {
     width: 30%;
     float: left;
-    border: 1px dashed green;
     height: 300px;
+}
+
+.content .sidebar.single {
+    padding: 0px 10px;
+}
+
+.content .sidebar .seaction {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content .sidebar .seaction .seaction-title {
+    margin: 10px 0px 10px 0px;
+}
+
+.content .sidebar .seaction .search {
+    margin-top: 80px;
+}
+
+.content .sidebar .seaction.topics ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid #e0e0ee;
+}
+
+.content .sidebar .seaction.topics ul li a {
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #e0e0ee;
+    transition: all 0.3s;
+}
+
+.content .sidebar .seaction.topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+
+/* Auth pages */
+
+.auth-content {
+    margin: 20px auto;
+    padding: 2%;
+    background: white;
+    border-radius: 5px;
+}
+
+.auth-content .form-title {
+    text-align: center;
+}
+
+.auth-content from div {
+    margin-bottom: 10px;
+}
+
+.auth-content h2 {
+    text-align: center;
+}
+
+.auth-content h2 a {
+    text-decoration: underline;
+}
+
+
+/*footer*/
+
+.footer {
+    background: #303063;
+    color: #d3d3d3d3;
+    height: 400px;
+    position: relative;
+}
+
+.footer .footer-content {
+    height: 350px;
+    display: flex;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .about h1 span {
+    color: blue;
+}
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .social a {
+    border: 1px solid gray;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.footer .footer-content .about .social a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .3s;
+}
+
+.footer .footer-content .links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    transition: all .3s;
+}
+
+.footer .footer-content .links ul a:hover {
+    color: white;
+    margin-left: 15px;
+    transition: all .3s;
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+}
+
+.footer .footer-bottom {
+    background: #292953;
+    color: #9e9494;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
 }
 
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-eqiuv="X-UA-Compatible" content="ie=edge">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/ecc4c4d503.js" crossorigin="anonymous"></script>
+
+    <!-- GG font -->
+    <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora&display=swap" rel="stylesheet">
+
+    <!-- Custom Styling-->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Custom Admin-->
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>Admin - thêm người dùng</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"><span> CSE </span> TLU</h1>
+        </div>
+        <i class="fas fa-bars menu-toggle"></i>
+        <ul class="nav">
+            <li><a href="../../trangchu.html">Trang chủ</a></li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i> Huy Anh
+                    <i class="fas fa-chevron-down" style="font-size: .8em;"></i>
+                </a>
+                <ul>
+                    <li><a href="#">Dashbroad</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </header>
+
+    <!--Page wrapper-->
+    <div class="admin-wrapper">
+        <!--left sidebar-->
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="../topic/index.html">Trang chính</a></li>
+                <li><a href="index.html">Trang cá nhân</a></li>
+                <li><a href="../../topic/index.html">Trang tin</a></li>
+            </ul>
+        </div>
+        <!--//left sidebar-->
+
+        <!--admin content-->
+        <div class="admin-content">
+            <div clas="button-group">
+                <a href="create.html" class="btn btn-big">Thêm người dùng</a>
+                <a href="index.html" class="btn btn-big">Trang người dùng</a>
+            </div>
+
+            <div class="content">
+
+                <h2 class="page-title">Thêm người dùng</h2>
+
+                <form action="create.html" method="POST">
+                    <div>
+                        <label> Tên người dùng </label>
+                        <input type="text" name="username" class="text-input">
+                    </div>
+
+                    <div>
+                        <label> email </label>
+                        <input type="text" name="email" class="text-input">
+                    </div>
+
+                    <div>
+                        <label> mật khẩu </label>
+                        <input type="text" name="Password" class="text-input">
+                    </div>
+
+                    <div>
+                        <label> nhập lại mật khẩu </label>
+                        <input type="text" name="PasswordConf" class="text-input">
+                    </div>
+                    <div>
+                        <label>chức vụ</label>
+                        <select name="role" class="text-input">
+                            <option value="ADMIN">Admin</option>
+                            <option value="sinhvien">Sinh viên</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-big">Thêm</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!--//admin content-->
+    </div>
+    <!--//Page wrapper-->
+
+
+    <!-- Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--slick-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!--Ckeditor-->
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+    <!--Custom script-->
+    <script src="../../js/scripts.js"></script>
+
+</body>
+
+</html>
